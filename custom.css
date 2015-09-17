@@ -1,0 +1,388 @@
+html {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 400;
+  font-size: 14px;
+}
+
+html, html a {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+body {
+  background-color: #ddd;
+}
+
+#page {
+  width: 1024px;
+  background-color: #fff;
+  margin: 40px auto;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+  position: relative; /* so we can absolutely position other things relative to the page */
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+  #page {
+    margin: 0 auto;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 1.6rem;  
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4, h5, h6 {
+  font-size: 1.1rem;
+}
+
+ol, ul {
+  margin: 0;
+  padding-left: 2.5rem;
+}
+
+.box-shadow {
+  padding: 5px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+/**
+  * Header
+  */
+#page > .page-header {
+  padding: 1rem 0.75rem 0;
+  height: 185px; /* so that background-color ends at bottom of the logo */
+  background: url('images/nas-alameda-aerial-view-banner.jpg') no-repeat;
+  background-size: 100% 130px;
+}
+
+.page-header a[rel="home"] {
+  display: inline-block; /* so we don't see underscore */
+}
+
+.page-header .menu-main-menu-container {
+  display: inline-block;
+  vertical-align: top; 
+}
+
+/**
+  * Footer
+  */
+#colophon.site-footer {
+  color: #999;
+  padding: 1rem;
+  text-align: right;
+  background-color: #262626;
+}
+
+/**
+  * Content areas
+  */
+#primary.content-area,
+#secondary.widget-area {
+  padding: 0 2rem;
+}
+/**
+  * Footer
+  */
+#colophon.site-footer {
+  color: #999;
+  padding: 1rem;
+  text-align: right;
+  background-color: #262626;
+}
+
+/**
+  * Home page - left side widget area
+  */
+#home-widgets .left-side {
+  float: left;
+  width: 400px;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+#home-widgets .left-side .widget h1 {
+  display: none;
+}
+#home-widgets .left-side .widget_sp_image {
+  padding: 5px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+}
+#home-widgets .left-side .widget_sp_image-description p {
+  margin: 0;
+  padding: 0 0.25rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+#home-widgets .left-side .widget img {
+  width: 100% !important;
+  height: auto !important;
+  padding: 0;
+  border-style: none;
+  box-shadow: none;
+}
+
+/**
+  * Home page - right side widget area
+  */
+#home-widgets .right-side {
+  margin-left: 400px;
+  padding: 0 1rem;
+}
+#home-widgets .right-side .widget,
+#home-widgets .right-side .widget aside {
+  display: inline-block;
+  width: 100%;
+}
+#home-widgets .right-side .widget h1 {
+  margin-bottom: 0;
+}
+
+/**
+  * Article header
+  */
+article > header {
+  background-color: #008;
+  border-top: 1px solid #008;
+  border-bottom: 1px solid #008;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  margin-top:  -55px; /* to center with bottom of logo */
+  padding-left: 14rem; /* to position text to the left of the logo */
+}
+article > header h1 {
+  color: #ffd700;
+  line-height: 1.6rem;
+  vertical-align: middle;
+}
+
+/**
+  * Breadcrumbs
+  */
+#breadcrumbs {
+  float: right;
+  font-size: 0.85rem;
+  font-weight: normal;
+  padding-right: 1rem;
+}
+#breadcrumbs a {
+  color: #ffd700;
+}
+#breadcrumbs .breadcrumb_last {
+  display: none;
+}
+
+article > .entry-content {
+  margin-top: 1.5rem; /* to position below the logo and header */
+}
+
+/*
+.entry-content imgho {
+  padding: 3px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+figure {
+  padding: 5px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);  
+}
+figure > img {
+  padding: 0 !important;
+  border-style: none !important;
+  box-shadow:  none !important;
+}
+figcaption {
+  font-size: 0.85em;
+}
+*/
+
+/**
+  * Main menu
+  */
+#main-nav	{
+  position: absolute;
+  top: 2px;
+  left: 250px;
+  right: 1rem;
+	height: 2rem;
+	margin: 0 0 10px;
+}
+
+#main-nav a	{
+	color: #008;
+  display: block;
+	padding: 0 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#main-nav a:hover {
+	color: #ffd700;
+  background-color: #008;
+}
+
+#main-nav ul	{
+	margin: 0; 
+  padding: 0;
+  background-color: #F0F8FF; /* AliceBlue */
+}
+
+#main-nav li	{
+	display: block;
+	float: left;
+	line-height: 2rem; /* this should be the same as your #main-nav height */
+	height: 2rem; /* this should be the same as your #main-nav height */
+	margin: 0; padding: 0; /* only needed if you don't have a reset */
+	position: relative; /* this is needed in order to position sub menus */
+}
+
+#main-nav .menu > li { /* top level menu */
+  background-color: #f0f1ff;
+  margin-right: 0.5rem;
+  opacity: 0.8;
+}
+
+#main-nav .sub-menu { /* this targets all sub menus */
+	display: none; /* hide all sub menus from view */
+	position: absolute;
+	top: 2rem; /* this should be the same height as the top level menu -- height + padding + borders */
+  background-color: #fff;
+  border: 1px solid #99c;
+  box-shadow: 1px 0 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+#main-nav .sub-menu > li { /* this targets all submenu items */
+	float: none; /* overwriting our float up above */
+	width: 15rem; /* set to the width you want your sub menus to be. This needs to match the value we set below */
+}
+
+#main-nav ul li:hover > ul {
+	display: block; /* show sub menus when hovering over a parent */
+}
+
+#main-nav ul ul li ul {
+	/* target all second, third, and deeper level sub menus */
+	left: 15rem; /* this needs to match the sub menu width set above -- width + padding + borders */
+	top: 0; /* this ensures the sub menu starts in line with its parent item */
+}
+
+/**
+  * Memorial navigation
+  */
+#memorial-nav a {
+  border: 1px solid rgb(0, 0, 136);
+  padding: 0 0.25rem;
+  margin-right: 0.5rem;
+  width: 2rem;
+  display: inline-block;
+  text-align: center;
+  background-color: #F0F8FF; /* aliceblue */
+  border-radius: 2px;
+}
+
+#memorial-nav a:hover {
+  color: #ffd700;
+  background-color: #008;
+}
+
+/**
+  * Memorial list
+  */
+.memorial-list {
+  float: left;
+  width: 100%;
+  margin: 1rem 0 1rem;
+}
+
+.memorial-list a {
+  float: left;
+  width: 25%;
+  padding-bottom: 0.25rem;
+}
+
+/**
+  * Event list.
+  */
+.event-list {
+  margin-bottom: 1rem;
+}
+article.event {
+  float: left;
+  width: 100%;
+  clear: both;
+  margin-bottom: 1rem;
+}
+
+article.event em {
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-style: normal;
+}
+
+article.event .summary {
+  float: left;
+  width: 100%;
+  margin-top: 0.75rem;
+}
+
+.widget_current_events_widget,
+.widget_recent_events_widget {
+  margin: 0;
+}
+.widget_current_events_widget h1,
+.widget_recent_events_widget h1 {
+  display: inline-block;
+}
+.widget_current_events_widget h1 + a,
+.widget_recent_events_widget h1 + a {
+  margin-left: 0.5rem;
+}
+/**
+  * Search box in header
+  */
+#global-search {
+  position:absolute;
+  top:98px;
+  right: 2px; 
+}
+
+#global-search input {
+  opacity: 0.9;
+  background-color: #F0F1FF;
+}
+
+#global-search input:hover,
+#global-search input:focus {
+  opacity: 1 !important;
+}
+
+#global-search .search-submit {
+  display: none;
+}

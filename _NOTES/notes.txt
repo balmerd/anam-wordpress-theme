@@ -1,0 +1,58 @@
+The "Home" page is using the "No Sidebar" page template ("template-no-sidebar.php")
+================================================================================================
+How did I create the Memorials view?
+------------------------------------------------------------------------------------------------
+1) created A-Z tags for Memorials filter
+
+2) created custom post type (see ANAM plugin)
+
+3) created template-memorials.php as "Memorials Page" template
+
+4) created Memorials page with a tenplate of "Memorials Page"
+  (so that viewing the "Memorials" page will render template-memorials.php)
+
+5) created Memorials posts with an A-Z tag
+
+6) when clicking on a letter, pass that letter to template-memorials.php as query variable "tag"
+  if template-memorials.php has the query variable "tag": if ( get_query_var('tag') ) {}
+    do custom query using that tag
+  else
+    show Memorials page
+
+create "content-single-memorial.php"
+create "single-memorial.php" that includes "content-single-memorial.php"
+create "navigation-memorial.php" to show letter links
+create "archive-memorial.php" that redirects to "Memorials" page
+================================================================================================
+How to create post categories?
+------------------------------------------------------------------------------------------------
+http://generatewp.com/
+http://localhost:32243/wp-admin/edit-tags.php?taxonomy=category
+================================================================================================
+What is the difference between post categories and tags?
+------------------------------------------------------------------------------------------------
+Categories are your site’s table of contents. 
+  
+Tags are your site’s index words. 
+
+Categories allowed for a broad grouping of post topics, but when you wanted to describe a 
+post in more specific terms, more categories were required. That led to very long category 
+lists inside the blog and very long lists in Categories Widgets.
+
+Categories can be arranged in a hierarchy.
+
+Each post must be attached to at least one category.
+  
+Tags are similar to categories, but they are generally used to describe your post in more 
+detail. The use of tags is entirely optional. Tags exist in their own right and have no set 
+relationship to anything else.
+================================================================================================
+How to create post types?
+------------------------------------------------------------------------------------------------
+================================================================================================
+How to query by Category and Tag
+------------------------------------------------------------------------------------------------
+http://wordpress.stackexchange.com/questions/4201/how-to-query-posts-by-category-and-tag
+
+So for the Memorial pages, we have 2 custom fields and one tag for the LastName initial
+================================================================================================

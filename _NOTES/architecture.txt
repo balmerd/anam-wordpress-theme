@@ -1,0 +1,47 @@
+can templates be inside a folder?
+can template files be named differently?
+==================================================================================================================
+Page Templates
+------------------------------------------------------------------------------------------------------------------
+template-home.php               Home            sidebars for events/featured images
+template-no-sidebar.php         No Sidebar      not sure what sidebar we would have
+template-current-events.php     Current Events
+template-recent-events.php      Recent Events
+template-memorials.php          Memorials
+==================================================================================================================
+Page Fragments
+------------------------------------------------------------------------------------------------------------------
+content-single-event.php
+content-single-memorial.php 
+header-breadcrumb.php
+navigation-memorial.php
+==================================================================================================================
+Redirect Pages
+------------------------------------------------------------------------------------------------------------------
+archive-event.php           ==> Current Events
+archive-memorial.php        ==> Memorials
+==================================================================================================================
+Page Rendering
+------------------------------------------------------------------------------------------------------------------
+single-event.php    --> content-single-event.php    --> header-breadcrumb.php
+single-memorial.php --> content-single-memorial.php --> header-breadcrumb.php
+                                                    --> navigation-memorial.php
+==================================================================================================================
+Home page layout
+
+full width widgets
+
+// hide the current page/post in breadcrumbs
+// ~\wp-content\themes\anam\js\skip-link-focus-fix.js
+document.querySelector('#breadcrumbs .breadcrumb_last').previousSibling.textContent = '';
+==================================================================================================================
+Plug-ins
+------------------------------------------------------------------------------------------------------------------
+ANAM                    setup ANAM config outside of functions.php (defined in )
+Advanced Custom Fields  for Event dates
+Current Template File   for debugging which template/parts are used for a page/post
+Catch IDs               show page/post ID's in list
+Theme Check             theme linter
+TinyMCE Advanced        WSYWIG editor
+Yoast SEO               breadcrumbs, social media links and more
+==================================================================================================================
