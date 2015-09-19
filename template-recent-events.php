@@ -15,7 +15,7 @@
 
   $query = $anamEvent->getRecentEvents();
 
-  $no_events_msg = 'Sorry, no Recent Events were found.';
+  $no_events_msg = 'Sorry, no events were found.';
 
   get_header(); ?>
 
@@ -27,9 +27,6 @@
       </article>
 
       <div class="entry-content">
-        <style>
-          .sharedaddy { display: none; } /* hide social sharing links that appear before event list */
-        </style>
         <?php the_content(); ?>
 
         <?php if ( $query->have_posts() ) : ?>

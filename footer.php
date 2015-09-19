@@ -12,7 +12,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-      &copy; Alameda Naval Air Museum, 2004-<?php echo date("Y") ?>. All rights reserved.
+      Copyright &copy; <?php echo date("Y") ?> Alameda Naval Air Museum. All rights reserved.
     </div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
