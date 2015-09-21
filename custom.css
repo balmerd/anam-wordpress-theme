@@ -430,3 +430,18 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
   background-color: #008;
   padding: 2px 5px;
 }
+
+/**
+  * Gallery images
+  */
+.gallery figure {
+  margin: 0;
+}
+.gallery-item {
+  padding: 5px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.gallery figure figcaption {
+  font-size: 0.9rem;
+}
