@@ -434,14 +434,27 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 /**
   * Gallery images
   */
+.gallery {
+  text-align: center;
+}
 .gallery figure {
   margin: 0;
+}
+.gallery figure figcaption {
+  padding: 0 5px;
+  font-size: 0.9rem;
+  height: 4rem;
+  overflow: hidden;
 }
 .gallery-item {
   padding: 5px;
   border: 1px solid #ddd;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
 }
-.gallery figure figcaption {
-  font-size: 0.9rem;
+.gallery-columns-5 .gallery-item {
+  max-width: 18%;
+  margin: 0px 10px 10px 0px;
+  max-height: 225px;
+  height: 225px;
+  overflow: hidden;
 }
