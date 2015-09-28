@@ -9,7 +9,7 @@
 ?>
 
 <section class="no-results not-found">
-	<header class="page-header">
+	<header class="page-header hidden">
 		<h1 class="page-title"><?php _e( 'Nothing Found', 'anam' ); ?></h1>
 	</header><!-- .page-header -->
 
@@ -21,7 +21,7 @@
 		<?php elseif ( is_search() ) : ?>
 
 			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'anam' ); ?></p>
-			<?php get_search_form(); ?>
+			<?php //get_search_form(); ?>
 
 		<?php else : ?>
 

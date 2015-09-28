@@ -19,7 +19,7 @@
 
   get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
       <article>
@@ -47,7 +47,7 @@
         ?>
       </div>
 		</main><!-- #main -->
-	</div><!-- #primary -->
+	</section><!-- #primary -->
 
 <?php //get_sidebar(); ?>
 <?php get_footer(); ?>

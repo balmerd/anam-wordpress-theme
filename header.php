@@ -31,13 +31,13 @@
     <div id="main-nav">
       <?php wp_nav_menu( array('menu' => 'Main Menu' )); ?>
     </div>
-    <form id="global-search" role="search" method="get" class="search-form hidden" action="http://localhost:32243/">
-			<label>
-				<span class="screen-reader-text">Search for:</span>
-				<input class="search-field" placeholder="Search&hellip;" value="" name="s" title="Search for:" type="search">
-			</label>
-			<input class="search-submit" value="Search" type="submit">
-		</form>
+    <form id="global-search" role="search" method="get" class="search-form" action="http://alamedanavalairmuseum.org/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="search&hellip;" name="s" value="">
+				</label>
+				<input class="search-submit" value="Search" type="submit">
+			</form>
   </div>
 
 	<div id="content" class="site-content">

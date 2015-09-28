@@ -10,20 +10,20 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
       <h1>primary->main here</h1>
 		</main><!-- #main -->
-	</div><!-- #primary -->
+	</section><!-- #primary -->
 
-	<div id="home-widgets" class="content-area" role="complementary">
+	<section id="home-widgets" class="content-area" role="complementary">
     <div class="left-side">left</div>
     <div class="right-side">
       <?php if ( is_active_sidebar( 'home-page-widgets' ) ) : ?>
     	  <?php dynamic_sidebar( 'home-page-widgets' ); ?>
       <?php endif; ?>
     </div>
-	</div>
+	</section>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

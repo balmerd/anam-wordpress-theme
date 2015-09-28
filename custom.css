@@ -169,7 +169,7 @@ ol, ul {
 /**
   * Article header
   */
-article > header {
+article:not(.search-result) > header {
   background-color: #008;
   border-top: 1px solid #008;
   border-bottom: 1px solid #008;
@@ -178,7 +178,7 @@ article > header {
   margin-top:  -55px; /* to center with bottom of logo */
   padding-left: 14rem; /* to position text to the left of the logo */
 }
-article > header h1 {
+article:not(.search-result) > header h1 {
   color: #ffd700;
   line-height: 1.6rem;
   vertical-align: middle;
@@ -353,6 +353,13 @@ article.event .summary {
   opacity: 1 !important;
 }
 #global-search .search-submit {
+  display: none;
+}
+
+/**
+  * Search results
+  */
+.search-results .comments-link {
   display: none;
 }
 

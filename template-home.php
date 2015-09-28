@@ -1,8 +1,7 @@
-<?php /*
-	Template Name: Home
-*/ ?>
 <?php
 /**
+ * Template Name: Home
+ *
  * The template for displaying home page -- with custom sidebars.
  *
  * @package ANAM
@@ -10,7 +9,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -27,7 +26,7 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
 
 		</main><!-- #main -->
-	</div><!-- #primary -->
+	</section><!-- #primary -->
 
 	<div id="home-widgets" class="content-area" role="complementary">
     <div class="left-side">

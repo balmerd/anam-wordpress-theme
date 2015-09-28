@@ -8,6 +8,8 @@
   <h1>
     <?php if ( get_post_type($post) == "memorial" ) : ?>
       In memory of <?php the_title(); ?>
+    <?php elseif ( is_search() ) : ?>
+      Search Results
     <?php else : ?>
       <?php the_title(); ?>
     <?php endif; ?>
