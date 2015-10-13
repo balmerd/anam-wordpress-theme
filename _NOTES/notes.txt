@@ -1,17 +1,16 @@
-The "Home" page is using the "No Sidebar" page template ("template-no-sidebar.php")
 ================================================================================================
 How did I create the Memorials view?
 ------------------------------------------------------------------------------------------------
 1) created A-Z tags for Memorials filter
 
-2) created custom post type (see ANAM plugin)
+2) created custom post type (see "anam-post-types.php")
 
 3) created template-memorials.php as "Memorials Page" template
 
 4) created Memorials page with a tenplate of "Memorials Page"
   (so that viewing the "Memorials" page will render template-memorials.php)
 
-5) created Memorials posts with an A-Z tag
+5) created Memorials posts with "A" - "Z" tags
 
 6) when clicking on a letter, pass that letter to template-memorials.php as query variable "tag"
   if template-memorials.php has the query variable "tag": if ( get_query_var('tag') ) {}

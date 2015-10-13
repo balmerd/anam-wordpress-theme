@@ -39,7 +39,7 @@ get_header(); ?>
             <div class="clear:both;"></div>
           <?php else : ?>
             <div style="margin:1rem 0;">
-              Sorry, no Memorials were found for last names starting with "<?php echo $tag; ?>".
+              <?php printf(__( 'Sorry, no Memorials were found for last names starting with "%s"', 'anam', $tag )); ?>
             </div>
           <?php endif; ?>
         </div>
@@ -60,5 +60,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-<?php // get_sidebar(); ?>
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

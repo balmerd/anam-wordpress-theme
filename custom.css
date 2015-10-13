@@ -42,6 +42,7 @@ a:hover {
 h1 {
   font-size: 1.6rem;  
 }
+
 h2 {
   font-size: 1.4rem;
 }
@@ -53,13 +54,17 @@ h3 {
   font-size: 1.2rem;
 }
 
-h4, h5, h6 {
+h4 {
   font-size: 1.1rem;
 }
 
 ol, ul {
   margin: 0;
   padding-left: 2.5rem;
+}
+
+main {
+  xxx-min-height: 25rem;
 }
 
 .box-shadow {
@@ -89,16 +94,6 @@ ol, ul {
 .page-header .menu-main-menu-container {
   display: inline-block;
   vertical-align: top; 
-}
-
-/**
-  * Footer
-  */
-#colophon.site-footer {
-  color: #999;
-  padding: 1rem;
-  text-align: right;
-  background-color: #262626;
 }
 
 /**

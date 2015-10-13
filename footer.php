@@ -12,7 +12,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-      Copyright &copy; <?php echo date("Y") ?> Alameda Naval Air Museum. All rights reserved.
+      <?php echo sprintf( __( 'Copyright &copy; %s Alameda Naval Air Museum. All rights reserved.', 'anam'), date( "Y" ) ) ?>
     </div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying image attachments
+ * The template for displaying image attachments. Modifed from twenty-fifteen theme.
  *
  * @package ANAM
  */
@@ -10,22 +10,17 @@ get_header(); ?>
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php
-				// Start the loop.
-				while ( have_posts() ) : the_post();
-			?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-					<nav id="image-navigation" class="navigation image-navigation">
+					<nav id="image-navigation" class="navigation image-navigation hidden">
 						<div class="nav-links">
 							<div class="nav-previous"><?php previous_image_link( false, __( 'Previous Image', 'anam' ) ); ?></div><div class="nav-next"><?php next_image_link( false, __( 'Next Image', 'anam' ) ); ?></div>
 						</div><!-- .nav-links -->
 					</nav><!-- .image-navigation -->
-
-					<header class="entry-header">
-						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-					</header><!-- .entry-header -->
+          
+          <?php get_template_part( 'header', 'breadcrumb' ); ?>
 
 					<div class="entry-content">
 
@@ -38,7 +33,7 @@ get_header(); ?>
 								 *
 								 * @param string $image_size Image size. Default 'large'.
 								 */
-								$image_size = apply_filters( 'anam_attachment_size', 'fullsize' );
+								$image_size = apply_filters( 'anam_attachment_size', 'full' );
 
 								echo wp_get_attachment_image( get_the_ID(), $image_size );
 							?>
@@ -65,7 +60,6 @@ get_header(); ?>
 					</div><!-- .entry-content -->
 
 					<footer class="entry-footer">
-						<?php anam_entry_meta(); ?>
 						<?php edit_post_link( __( 'Edit', 'anam' ), '<span class="edit-link">', '</span>' ); ?>
 					</footer><!-- .entry-footer -->
 
@@ -79,7 +73,7 @@ get_header(); ?>
 
 					// Previous/next post navigation.
 					the_post_navigation( array(
-						'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'anam' ),
+						'prev_text' => _x( '<span class="meta-nav">Published in </span><span class="post-title">%title</span>', 'Parent post link', 'anam' ),
 					) );
 
 				// End the loop.

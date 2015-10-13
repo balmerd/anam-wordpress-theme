@@ -109,4 +109,4 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Load ANAM configuration files.
  */
-require get_template_directory() . '/inc/anam-config.php';
+require get_template_directory() . '/anam-config.php';

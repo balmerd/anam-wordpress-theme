@@ -1,16 +1,15 @@
-can templates be inside a folder?
-can template files be named differently?
 ==================================================================================================================
 Page Templates
 ------------------------------------------------------------------------------------------------------------------
 template-home.php               Home            sidebars for events/featured images
-template-no-sidebar.php         No Sidebar      not sure what sidebar we would have
+template-no-sidebar.php         No Sidebar      not sure what sidebar we would have (DELETE IF NOT USED)
 template-current-events.php     Current Events
 template-recent-events.php      Recent Events
 template-memorials.php          Memorials
 ==================================================================================================================
 Page Fragments
 ------------------------------------------------------------------------------------------------------------------
+content-event-list.php -> content-event-summary.php (repeated for each event)
 content-single-event.php
 content-single-memorial.php 
 header-breadcrumb.php
@@ -19,29 +18,34 @@ navigation-memorial.php
 Redirect Pages
 ------------------------------------------------------------------------------------------------------------------
 archive-event.php           ==> Current Events
+archive-nas-unit.php        ==> NAS Units
 archive-memorial.php        ==> Memorials
 ==================================================================================================================
-Page Rendering
+Page Rendering (use Current Template File plugin to see files being used to render the current page)
 ------------------------------------------------------------------------------------------------------------------
 single-event.php    --> content-single-event.php    --> header-breadcrumb.php
 single-memorial.php --> content-single-memorial.php --> header-breadcrumb.php
                                                     --> navigation-memorial.php
 ==================================================================================================================
-Home page layout
-
-full width widgets
-
-// hide the current page/post in breadcrumbs
-// ~\wp-content\themes\anam\js\skip-link-focus-fix.js
+hide the current page/post in breadcrumbs
+------------------------------------------------------------------------------------------------------------------
 document.querySelector('#breadcrumbs .breadcrumb_last').previousSibling.textContent = '';
 ==================================================================================================================
 Plug-ins
 ------------------------------------------------------------------------------------------------------------------
-ANAM                    setup ANAM config outside of functions.php (defined in )
 Advanced Custom Fields  for Event dates
+Akismet                 for spam blocking
 Current Template File   for debugging which template/parts are used for a page/post
 Catch IDs               show page/post ID's in list
+Enhanced Media Library  for adding categories to images and filtering
+Google Calendar Events  for connecting to a Google Calender feed
+Image Widget            for showing a single image in a sidebar (used for promo's and features images on the home page)
+Jetpack                 WHAT FEATURES ARE WE USING?
+Log Viewer              NOT USING THIS YET
+Maintenance Mode        for taking the site offline
+Meta Slider             demo on http://localhost:32243/history/nas-alameda-units/
 Theme Check             theme linter
-TinyMCE Advanced        WSYWIG editor
+TinyMCE Advanced        WYSIWYG editor
+TinyMCE Color Picker    adds color picker
 Yoast SEO               breadcrumbs, social media links and more
 ==================================================================================================================

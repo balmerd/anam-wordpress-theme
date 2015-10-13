@@ -14,40 +14,6 @@
   $anamEvent = new ANAMEvent();
 
   $query = $anamEvent->getCurrentEvents();
-
-  $no_events_msg = 'Sorry, no events were found.';
-
-  get_header(); ?>
-
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-      <article>
-        <?php get_template_part( 'header', 'breadcrumb' ); ?>
-      </article>
-
-      <div class="entry-content">
-        <?php the_content(); ?>
-        
-        <?php if ( $query->have_posts() ) : ?>
-          <div class="event-list">
-			      <?php
-              while ( $query->have_posts() ) :
-                $query->the_post();
-                get_template_part('event-summary');
-			        endwhile;
-            ?>
-          </div>
-        <?php else : ?>
-          <div style="margin-bottom:1rem;">
-            <?php echo $no_events_msg ?>
-          </div>
-        <?php endif;                
-        wp_reset_query();
-        ?>
-      </div>
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
-<?php // get_sidebar(); ?>
-<?php get_footer(); ?>
+  
+  //http://keithdevon.com/passing-variables-to-get_template_part-in-wordpress/
+  include(locate_template('content-event-list.php'));

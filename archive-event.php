@@ -5,7 +5,7 @@
  * @package ANAM
  */
 
-  $pagelink = get_page_link (get_page_by_title( 'Current Events' ));
+  $redirectLink = get_page_link (get_page_by_title( 'Current Events' ));
 
-  header("Location: $pagelink", TRUE, 301);
+  header("Location: $redirectLink", TRUE, 301);
 ?>
